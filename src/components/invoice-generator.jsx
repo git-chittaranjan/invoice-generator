@@ -174,17 +174,20 @@ export default function Invoice() {
         </Document >
     );
     return (
-        <div className="max-w-2xl mx-auto mt-6 mb-4 space-y-4">
-            <div className="w-full h-[500px] border rounded-lg shadow-lg overflow-hidden">
-                <PDFViewer style={{ width: "100%", height: "90vh" }}>
+        <div className="max-w-3xl mx-auto mt-12 mb-8 px-4 sm:px-6 lg:px-8 space-y-6">
+            {/* PDF Container */}
+            <div className="w-full h-[500px] sm:h-[600px] md:h-[70vh] border border-gray-300 dark:border-gray-700 rounded-2xl shadow-2xl overflow-hidden bg-white dark:bg-gray-900 transition-all">
+                <PDFViewer style={{ width: "100%", height: "100%" }}>
                     <InvoicePDF />
                 </PDFViewer>
             </div>
+
+            {/* Download Button */}
             <div className="text-center">
                 <PDFDownloadLink document={<InvoicePDF />} fileName="Invoice.pdf">
                     {({ loading }) => (
                         <button
-                            className="mt-4 px-12 py-3 bg-amber-600 text-white font-medium rounded-xl hover:bg-amber-700 hover:scale-105 transition-all duration-200"
+                            className="mt-6 px-16 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300"
                         >
                             {loading ? "Preparing document..." : "Download PDF"}
                         </button>
@@ -192,6 +195,5 @@ export default function Invoice() {
                 </PDFDownloadLink>
             </div>
         </div>
-
     )
 } 
