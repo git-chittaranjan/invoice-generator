@@ -176,7 +176,7 @@ export default function Invoice() {
     return (
         <div className="max-w-3xl mx-auto mt-12 mb-8 px-4 sm:px-6 lg:px-8 space-y-6">
             {/* PDF Container */}
-            <div className="w-full h-[500px] sm:h-[600px] md:h-[70vh] border border-gray-300 dark:border-gray-700 rounded-2xl shadow-2xl overflow-hidden bg-white dark:bg-gray-900 transition-all">
+            <div className="w-full h-[500px] sm:h-[45vh] lg:h-[70vh] border border-gray-300 dark:border-gray-700 rounded-2xl shadow-2xl overflow-hidden bg-white dark:bg-gray-900 transition-all">
                 <PDFViewer style={{ width: "100%", height: "100%" }}>
                     <InvoicePDF />
                 </PDFViewer>
