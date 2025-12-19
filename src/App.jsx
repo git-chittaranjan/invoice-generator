@@ -3,9 +3,9 @@ import Invoice from './components/invoice-generator';
 
 function App() {
   return (
-    <div className="min-h-screen bg-black flex flex-col items-center justify-center p-6 ">
+    <div className="min-h-screen bg-teal-900 flex flex-col items-center justify-center p-6 ">
 
-      <h2 className="text-3xl font-bold text-white pb-12 lg:pb-6">
+      <h2 className="text-4xl font-extrabold text-white pb-12 lg:pb-6">
         Invoice Generator
       </h2>
 
